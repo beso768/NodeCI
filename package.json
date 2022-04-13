@@ -5,7 +5,7 @@
   "main": "index.js",
   "jest":{
     "setupFilesAfterEnv": ["./tests/setup.js"],
-    "testTimeout": 50000
+    "testTimeout": 30000
   },
   "scripts": {
     "start": "node index.js",
