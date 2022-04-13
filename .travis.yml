@@ -13,9 +13,8 @@ cache:
     - node_modules
     - client/node_modules
 install:
-  - travis_wait npm install
+  - npm install
   - npm run build
 script:
   - nohup npm run start & 
   - sleep 3
-  - npm run test
