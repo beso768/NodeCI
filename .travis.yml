@@ -18,3 +18,4 @@ install:
 script:
   - nohup npm run start & 
   - sleep 3
+  - travis_wait npm run test
