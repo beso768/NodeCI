@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const redis = require('redis')
 const keys = require('../config/keys');
 
-const client = redis.createClient(keys.redisUrl);
+const client = redis.createClient(keys.redisUrl); 
 client.on('error', (err) => console.log('Redis Client Error', err));
 client.connect();
 
@@ -26,7 +26,6 @@ mongoose.Query.prototype.exec = async function(){
     )
     const cacheValue= await client.hGet(this.hashKey,key)
     if(cacheValue){
-        console.log(cacheValue);
         const doc = JSON.parse(cacheValue) 
 
         return Array.isArray(doc) 

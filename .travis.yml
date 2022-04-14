@@ -18,4 +18,9 @@ install:
 script:
   - nohup npm run start & 
   - sleep 3
-  - travis_wait npm run test
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  keep-history: true
+  api-key: a98c9c64-7636-41d5-9a0f-625058d5e90a
+  app: whispering-inlet-95934
